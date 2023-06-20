@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indexedDB</title>
+    <!-- Fonst Awesome  -->
+    <script
+      src="https://kit.fontawesome.com/5cb82b043a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="todo" class="todo">
+      <div class="mode">
+        <div id="mode" class="mode-icon">
+          <i class="fa-solid fa-toggle-off"></i>
+        </div>
+      </div>
+      <h1>Todo App</h1>
+      <!-- Todo Form  -->
+      <div class="todo-form">
+        <form action="#">
+          <input
+            id="input-field"
+            class="input-field"
+            type="text"
+            placeholder="What's your todo ?"
+          />
+          <button id="add-btn" class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+          <button title="Cancel Update" id="cancel-btn" class="add-btn"><i class="fa-solid fa-ban"></i></button>
+        </form>
+      </div>
+
+         <!-- Search todo  -->
+         <form action="#" class="search-todo" onsubmit="return false" autocomplete="off">
+            <input
+              id="search-field"
+              type="text"
+              placeholder="Search todo title"
+            />
+            <select class="filter-and-sort" name="filter-todos" id="filter">
+              <option disabled selected value="filter">
+                Filter
+              </option>
+              <option value="All">All</option>
+              <option value="Completed">Completed</option>
+              <option value="Incompleted">Incompleted</option>
+            </select>
+  
+            <select class="filter-and-sort" name="sort-todos" id="sort">
+              <option value="Sort by alphabet" disabled selected>
+                Sort by alphabet
+              </option>
+              <option value="Sort A - Z">Sort A - Z</option>
+              <option value="Sort Z - A">Sort Z - A</option>
+              <option value="Default">Default</option>
+            </select>
+          </form>
+
+      <!-- Todos Display  -->
+      <div class="todos-container">
+        <table>
+          <tbody id="table-body">
+            <!-- TR will be diynamically created  -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" style="text-align: center">
+                <button id="clear-all-btn" class="btn clear-all-btn">
+                  Clear All
+                </button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
